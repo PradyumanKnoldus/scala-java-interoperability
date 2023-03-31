@@ -12,25 +12,25 @@ class CalculatorWrapper {
   /**
    * Adds two given numbers and returns the result as a CalculationResult object.
    */
-  def add(a: Double, b: Double): CalculationResult = CalculationResult(Calculator.add(a, b))
+  def add(firstNumber: Double, secondNumber: Double): CalculationResult = CalculationResult(Calculator.add(firstNumber, secondNumber))
 
   /**
    * Subtracts the second given number from the first and returns the result as a CalculationResult object.
    */
-  def subtract(a: Double, b: Double): CalculationResult = CalculationResult(Calculator.subtract(a, b))
+  def subtract(firstNumber: Double, secondNumber: Double): CalculationResult = CalculationResult(Calculator.subtract(firstNumber, secondNumber))
 
   /**
    * Multiplies two given numbers and returns the result as a CalculationResult object.
    */
-  def multiply(a: Double, b: Double): CalculationResult = CalculationResult(Calculator.multiply(a, b))
+  def multiply(firstNumber: Double, secondNumber: Double): CalculationResult = CalculationResult(Calculator.multiply(firstNumber, secondNumber))
 
   /**
    * Divides the first given number by the second and returns the result as a CalculationResult object.
    * If the second number is zero, returns CalculationResult with result as 0 and an error message in the message field.
    */
-  def divide(a: Double, b: Double): CalculationResult = {
+  def divide(numerator: Double, denominator: Double): CalculationResult = {
 
-    Try(Calculator.divide(a, b)) match {
+    Try(Calculator.divide(numerator, denominator)) match {
       case Success(result) => CalculationResult(result)
       case Failure(exception) => CalculationResult(0, Some(exception.getMessage))
     }

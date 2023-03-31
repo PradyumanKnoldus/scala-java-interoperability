@@ -84,7 +84,7 @@ Exceptions
 
 The divide method handles the ArithmeticException that the Calculator.divide method may throw by returning a CalculationResult object with the result as 0 and an error message in the message field.
 
-### Storage Wrapper
+### Storage Wrapper Class
 
 This class is a Scala wrapper around the Storage class in the com.knoldus.java package. It implements the StorageTrait interface and provides the same functionality as the original Storage class.
 
